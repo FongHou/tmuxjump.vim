@@ -14,7 +14,8 @@ function capture_panes() {
       fi
     done
 
-    echo "$captured" | grep -oiE "[\/]?([a-z\_\-]+\/)+[a-z.]+(.)*" | cut -d' ' -f1 | grep "$pattern" 
+    #echo "$captured" | grep -oiE "[\/]?([a-z\_\-]+\/)+[a-z.]+(.)*" | cut -d' ' -f1 | grep "$pattern"
+    echo "$captured" | grep -oiE "[~.]?[\/]?([a-z0-9_.-]+[\/])+[a-z0-9_.-]+:[0-9]+(:[0-9]+)?" | grep "$pattern"
 }
 
 capture_panes
