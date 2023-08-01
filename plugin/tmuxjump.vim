@@ -84,6 +84,7 @@ function tmuxjump#open_fzf(list) abort
   let l:fzf_options = [
         \ '--no-multi',
         \ '--prompt', l:prompt,
+        \ '--delimiter', ':',
         \ '--nth', '1',
         \ '--no-sort',
         \]
